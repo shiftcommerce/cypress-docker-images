@@ -7,6 +7,8 @@
 #
 FROM cypress/browsers:node16.14.2-slim-chrome100-ff99-edge
 
+RUN apt update && apt install make
+
 # avoid too many progress messages
 # https://github.com/cypress-io/cypress/issues/1243
 ENV CI=1 \
